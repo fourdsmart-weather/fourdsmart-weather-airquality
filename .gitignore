@@ -1,4 +1,10 @@
 *.class
+*.svn
+*target
+*.settings
+*.project
+*.classpath
+*.log
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

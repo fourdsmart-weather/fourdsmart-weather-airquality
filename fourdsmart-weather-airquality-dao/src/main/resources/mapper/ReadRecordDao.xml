@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fourdsmart.weather.airquality.dao.ReadRecordDao">
+
+
+
+	<insert id="save" parameterType="ReadRecordBean">
+		INSERT INTO
+		read_record
+		(reportDate,type)
+		VALUES
+		(#{reportDate},#{type})
+	</insert>
+
+
+	<select id="getReadRecordWithReportDate" parameterType="String" resultType="ReadRecordBean">
+		SELECT * FROM read_record WHERE reportDate = #{reportDate}
+	</select>
+	
+	
+	<select id="getAllData"  resultType="ReadRecordBean">
+		SELECT * FROM read_record
+	</select>
+
+</mapper>
